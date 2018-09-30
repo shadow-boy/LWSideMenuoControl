@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF5E7447216132310082AB69 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5E7446216132310082AB69 /* AppDelegate.m */; };
+		BF5E744A216132310082AB69 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5E7449216132310082AB69 /* FirstViewController.m */; };
+		BF5E744D216132310082AB69 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5E744C216132310082AB69 /* SecondViewController.m */; };
+		BF5E7450216132310082AB69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5E744E216132310082AB69 /* Main.storyboard */; };
+		BF5E7452216132320082AB69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5E7451216132320082AB69 /* Assets.xcassets */; };
+		BF5E7455216132320082AB69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5E7453216132320082AB69 /* LaunchScreen.storyboard */; };
+		BF5E7458216132320082AB69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5E7457216132320082AB69 /* main.m */; };
+		BF5E7462216132320082AB69 /* LWSideMenuoControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5E7461216132320082AB69 /* LWSideMenuoControlTests.m */; };
+		BF5E746D216132320082AB69 /* LWSideMenuoControlUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5E746C216132320082AB69 /* LWSideMenuoControlUITests.m */; };
+		BF5E747D216132690082AB69 /* thirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5E747A216132690082AB69 /* thirdViewController.m */; };
+		BF5E747E216132690082AB69 /* thirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF5E747C216132690082AB69 /* thirdViewController.xib */; };
+		BF5E7482216132E50082AB69 /* UIViewController+SideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5E7480216132E50082AB69 /* UIViewController+SideMenu.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BF5E745E216132320082AB69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF5E743A216132310082AB69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF5E7441216132310082AB69;
+			remoteInfo = LWSideMenuoControl;
+		};
+		BF5E7469216132320082AB69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF5E743A216132310082AB69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF5E7441216132310082AB69;
+			remoteInfo = LWSideMenuoControl;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BF5E7442216132310082AB69 /* LWSideMenuoControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LWSideMenuoControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF5E7445216132310082AB69 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BF5E7446216132310082AB69 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BF5E7448216132310082AB69 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		BF5E7449216132310082AB69 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		BF5E744B216132310082AB69 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		BF5E744C216132310082AB69 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		BF5E744F216132310082AB69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF5E7451216132320082AB69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF5E7454216132320082AB69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF5E7456216132320082AB69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF5E7457216132320082AB69 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BF5E745D216132320082AB69 /* LWSideMenuoControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LWSideMenuoControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF5E7461216132320082AB69 /* LWSideMenuoControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LWSideMenuoControlTests.m; sourceTree = "<group>"; };
+		BF5E7463216132320082AB69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF5E7468216132320082AB69 /* LWSideMenuoControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LWSideMenuoControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF5E746C216132320082AB69 /* LWSideMenuoControlUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LWSideMenuoControlUITests.m; sourceTree = "<group>"; };
+		BF5E746E216132320082AB69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF5E747A216132690082AB69 /* thirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = thirdViewController.m; sourceTree = "<group>"; };
+		BF5E747B216132690082AB69 /* thirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thirdViewController.h; sourceTree = "<group>"; };
+		BF5E747C216132690082AB69 /* thirdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = thirdViewController.xib; sourceTree = "<group>"; };
+		BF5E7480216132E50082AB69 /* UIViewController+SideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SideMenu.m"; sourceTree = "<group>"; };
+		BF5E7481216132E50082AB69 /* UIViewController+SideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SideMenu.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF5E743F216132310082AB69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF5E745A216132320082AB69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF5E7465216132320082AB69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF5E7439216132310082AB69 = {
+			isa = PBXGroup;
+			children = (
+				BF5E7444216132310082AB69 /* LWSideMenuoControl */,
+				BF5E7460216132320082AB69 /* LWSideMenuoControlTests */,
+				BF5E746B216132320082AB69 /* LWSideMenuoControlUITests */,
+				BF5E7443216132310082AB69 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF5E7443216132310082AB69 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF5E7442216132310082AB69 /* LWSideMenuoControl.app */,
+				BF5E745D216132320082AB69 /* LWSideMenuoControlTests.xctest */,
+				BF5E7468216132320082AB69 /* LWSideMenuoControlUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF5E7444216132310082AB69 /* LWSideMenuoControl */ = {
+			isa = PBXGroup;
+			children = (
+				BF5E747F216132E50082AB69 /* Classes */,
+				BF5E747B216132690082AB69 /* thirdViewController.h */,
+				BF5E747A216132690082AB69 /* thirdViewController.m */,
+				BF5E747C216132690082AB69 /* thirdViewController.xib */,
+				BF5E7445216132310082AB69 /* AppDelegate.h */,
+				BF5E7446216132310082AB69 /* AppDelegate.m */,
+				BF5E7448216132310082AB69 /* FirstViewController.h */,
+				BF5E7449216132310082AB69 /* FirstViewController.m */,
+				BF5E744B216132310082AB69 /* SecondViewController.h */,
+				BF5E744C216132310082AB69 /* SecondViewController.m */,
+				BF5E744E216132310082AB69 /* Main.storyboard */,
+				BF5E7451216132320082AB69 /* Assets.xcassets */,
+				BF5E7453216132320082AB69 /* LaunchScreen.storyboard */,
+				BF5E7456216132320082AB69 /* Info.plist */,
+				BF5E7457216132320082AB69 /* main.m */,
+			);
+			path = LWSideMenuoControl;
+			sourceTree = "<group>";
+		};
+		BF5E7460216132320082AB69 /* LWSideMenuoControlTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF5E7461216132320082AB69 /* LWSideMenuoControlTests.m */,
+				BF5E7463216132320082AB69 /* Info.plist */,
+			);
+			path = LWSideMenuoControlTests;
+			sourceTree = "<group>";
+		};
+		BF5E746B216132320082AB69 /* LWSideMenuoControlUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BF5E746C216132320082AB69 /* LWSideMenuoControlUITests.m */,
+				BF5E746E216132320082AB69 /* Info.plist */,
+			);
+			path = LWSideMenuoControlUITests;
+			sourceTree = "<group>";
+		};
+		BF5E747F216132E50082AB69 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BF5E7481216132E50082AB69 /* UIViewController+SideMenu.h */,
+				BF5E7480216132E50082AB69 /* UIViewController+SideMenu.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF5E7441216132310082AB69 /* LWSideMenuoControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF5E7471216132320082AB69 /* Build configuration list for PBXNativeTarget "LWSideMenuoControl" */;
+			buildPhases = (
+				BF5E743E216132310082AB69 /* Sources */,
+				BF5E743F216132310082AB69 /* Frameworks */,
+				BF5E7440216132310082AB69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LWSideMenuoControl;
+			productName = LWSideMenuoControl;
+			productReference = BF5E7442216132310082AB69 /* LWSideMenuoControl.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BF5E745C216132320082AB69 /* LWSideMenuoControlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF5E7474216132320082AB69 /* Build configuration list for PBXNativeTarget "LWSideMenuoControlTests" */;
+			buildPhases = (
+				BF5E7459216132320082AB69 /* Sources */,
+				BF5E745A216132320082AB69 /* Frameworks */,
+				BF5E745B216132320082AB69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF5E745F216132320082AB69 /* PBXTargetDependency */,
+			);
+			name = LWSideMenuoControlTests;
+			productName = LWSideMenuoControlTests;
+			productReference = BF5E745D216132320082AB69 /* LWSideMenuoControlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BF5E7467216132320082AB69 /* LWSideMenuoControlUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF5E7477216132320082AB69 /* Build configuration list for PBXNativeTarget "LWSideMenuoControlUITests" */;
+			buildPhases = (
+				BF5E7464216132320082AB69 /* Sources */,
+				BF5E7465216132320082AB69 /* Frameworks */,
+				BF5E7466216132320082AB69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF5E746A216132320082AB69 /* PBXTargetDependency */,
+			);
+			name = LWSideMenuoControlUITests;
+			productName = LWSideMenuoControlUITests;
+			productReference = BF5E7468216132320082AB69 /* LWSideMenuoControlUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF5E743A216132310082AB69 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = CPX;
+				TargetAttributes = {
+					BF5E7441216132310082AB69 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					BF5E745C216132320082AB69 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = BF5E7441216132310082AB69;
+					};
+					BF5E7467216132320082AB69 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = BF5E7441216132310082AB69;
+					};
+				};
+			};
+			buildConfigurationList = BF5E743D216132310082AB69 /* Build configuration list for PBXProject "LWSideMenuoControl" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF5E7439216132310082AB69;
+			productRefGroup = BF5E7443216132310082AB69 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF5E7441216132310082AB69 /* LWSideMenuoControl */,
+				BF5E745C216132320082AB69 /* LWSideMenuoControlTests */,
+				BF5E7467216132320082AB69 /* LWSideMenuoControlUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF5E7440216132310082AB69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF5E7455216132320082AB69 /* LaunchScreen.storyboard in Resources */,
+				BF5E7452216132320082AB69 /* Assets.xcassets in Resources */,
+				BF5E747E216132690082AB69 /* thirdViewController.xib in Resources */,
+				BF5E7450216132310082AB69 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF5E745B216132320082AB69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF5E7466216132320082AB69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF5E743E216132310082AB69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF5E7482216132E50082AB69 /* UIViewController+SideMenu.m in Sources */,
+				BF5E744D216132310082AB69 /* SecondViewController.m in Sources */,
+				BF5E7447216132310082AB69 /* AppDelegate.m in Sources */,
+				BF5E7458216132320082AB69 /* main.m in Sources */,
+				BF5E744A216132310082AB69 /* FirstViewController.m in Sources */,
+				BF5E747D216132690082AB69 /* thirdViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF5E7459216132320082AB69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF5E7462216132320082AB69 /* LWSideMenuoControlTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF5E7464216132320082AB69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF5E746D216132320082AB69 /* LWSideMenuoControlUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BF5E745F216132320082AB69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF5E7441216132310082AB69 /* LWSideMenuoControl */;
+			targetProxy = BF5E745E216132320082AB69 /* PBXContainerItemProxy */;
+		};
+		BF5E746A216132320082AB69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF5E7441216132310082AB69 /* LWSideMenuoControl */;
+			targetProxy = BF5E7469216132320082AB69 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BF5E744E216132310082AB69 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF5E744F216132310082AB69 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BF5E7453216132320082AB69 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF5E7454216132320082AB69 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF5E746F216132320082AB69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BF5E7470216132320082AB69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF5E7472216132320082AB69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LWSideMenuoControl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilecpx.LWSideMenuoControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF5E7473216132320082AB69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LWSideMenuoControl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilecpx.LWSideMenuoControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BF5E7475216132320082AB69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LWSideMenuoControlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilecpx.LWSideMenuoControlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LWSideMenuoControl.app/LWSideMenuoControl";
+			};
+			name = Debug;
+		};
+		BF5E7476216132320082AB69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LWSideMenuoControlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilecpx.LWSideMenuoControlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LWSideMenuoControl.app/LWSideMenuoControl";
+			};
+			name = Release;
+		};
+		BF5E7478216132320082AB69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LWSideMenuoControlUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilecpx.LWSideMenuoControlUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LWSideMenuoControl;
+			};
+			name = Debug;
+		};
+		BF5E7479216132320082AB69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LWSideMenuoControlUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilecpx.LWSideMenuoControlUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LWSideMenuoControl;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF5E743D216132310082AB69 /* Build configuration list for PBXProject "LWSideMenuoControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF5E746F216132320082AB69 /* Debug */,
+				BF5E7470216132320082AB69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF5E7471216132320082AB69 /* Build configuration list for PBXNativeTarget "LWSideMenuoControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF5E7472216132320082AB69 /* Debug */,
+				BF5E7473216132320082AB69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF5E7474216132320082AB69 /* Build configuration list for PBXNativeTarget "LWSideMenuoControlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF5E7475216132320082AB69 /* Debug */,
+				BF5E7476216132320082AB69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF5E7477216132320082AB69 /* Build configuration list for PBXNativeTarget "LWSideMenuoControlUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF5E7478216132320082AB69 /* Debug */,
+				BF5E7479216132320082AB69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF5E743A216132310082AB69 /* Project object */;
+}

@@ -19,12 +19,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     thirdViewController * vc = [[thirdViewController alloc]init];
-    [self setLeftSideMenuController:vc attribute:@{k_Menu_width_key:@(200),k_mask_color_key:[[UIColor blackColor] colorWithAlphaComponent:0.2]}];
+    [self setSideMenuController:vc sideMenuDirection:SideMenuDirection_right attribute:@{k_Menu_width_key:@(200),k_mask_color_key:[[UIColor blackColor] colorWithAlphaComponent:0.2]}];
+
 }
 - (IBAction)show:(id)sender {
     
     
-    [self showLeftSideMenuView:YES];
+    [self showSideMenuView:YES];
     
 }
 

@@ -13,6 +13,20 @@ static NSString *const k_mask_color_key = @"k_mask_color_key";//c非侧边部分
 
 
 
+/**
+ 侧边栏方向
+
+ - SideMenuDirection_left: 左边出来、
+ - SideMenuDirection_right: 右边出来
+ */
+typedef NS_ENUM(NSInteger,SideMenuDirection) {
+    SideMenuDirection_left = 0,
+    SideMenuDirection_right
+};
+
+
+
+
 NS_ASSUME_NONNULL_BEGIN
 
 
@@ -34,6 +48,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic,strong)UIView * maskView;
 
+@property (nonatomic,assign)BOOL isShowOn;/**<是否展开*/
+
+@property (nonatomic,assign)SideMenuDirection direction;/**<方向*/
+
+
+
 
 
 
@@ -44,7 +64,8 @@ NS_ASSUME_NONNULL_BEGIN
  @param leftSideController 左边控制器
  @param attr 参数配置
  */
--(void)setLeftSideMenuController:(UIViewController *)leftSideController
+-(void)setSideMenuController:(UIViewController *)sideController
+           sideMenuDirection:(SideMenuDirection)direction
                        attribute:(NSDictionary *)attr;
 
 
@@ -52,9 +73,9 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  显示出侧边栏
 
- @param animation <#animation description#>
+ @param animation animation description
  */
--(void)showLeftSideMenuView:(BOOL)animation;
+-(void)showSideMenuView:(BOOL)animation;
 
 
 
@@ -64,7 +85,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param animation 动画
  @param comletion 隐藏完毕
  */
--(void)hideLeftSideMenuView:(BOOL)animation comletion:(void(^)(BOOL finish))comletion;
+-(void)hideSideMenuView:(BOOL)animation comletion:(void(^)(BOOL finish))comletion;
 
 
 /**
@@ -72,7 +93,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param animation <#animation description#>
  */
--(void)removeLeftSideMenuView:(BOOL)animation;
+-(void)removeSideMenuView:(BOOL)animation;
 
 
 

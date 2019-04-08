@@ -16,14 +16,17 @@
 
 @implementation UIViewController (SideMenu)
 
--(void)setLeftSideMenuController:(UIViewController *)leftSideController
-                       attribute:(NSDictionary *)attr{
-    self.sideMenuView = leftSideController.view;
+-(void)setSideMenuController:(UIViewController *)sideController
+           sideMenuDirection:(SideMenuDirection)direction
+                   attribute:(NSDictionary *)attr{
+    
+    self.direction = direction;
+    self.sideMenuView = sideController.view;
     
     self.sideAttr = attr;
     [self cofigViews];
     [self addGestureRecognizer];
-    [self addChildViewController:leftSideController];
+    [self addChildViewController:sideController];
 
     
 }
@@ -38,11 +41,22 @@
     float width_side = [[self.sideAttr objectForKey:k_Menu_width_key]  floatValue];
     self.maskView.backgroundColor = maskColor;
     self.maskView.alpha = 0;
-    CGRect rect_side = CGRectMake(0, 0, width_side, window.frame.size.height);
+    
+    CGFloat origin_x = 0;
+    CGFloat translation_x = -width_side;
+    if (self.direction == SideMenuDirection_right)
+    {
+        origin_x = window.bounds.size.width - width_side;
+        translation_x = width_side;
+    }
+    CGRect rect_side = CGRectMake(origin_x, 0, width_side, window.frame.size.height);
     self.sideMenuView.frame = rect_side;
     [window addSubview:self.sideMenuView];
     //默认隐藏到左边
-    self.sideMenuView.transform = CGAffineTransformMakeTranslation(-width_side, 0);
+   
+    
+    
+    self.sideMenuView.transform = CGAffineTransformMakeTranslation(translation_x, 0);
     self.sideMenuView.userInteractionEnabled = YES;
     self.maskView.userInteractionEnabled = YES;
     
@@ -73,7 +87,7 @@
     
     
 }
--(void)showLeftSideMenuView:(BOOL)animation{
+-(void)showSideMenuView:(BOOL)animation{
     [self.maskView.gestureRecognizers enumerateObjectsUsingBlock:^(__kindof UIGestureRecognizer * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([obj isKindOfClass:[UIScreenEdgePanGestureRecognizer class]]){
             obj.enabled = NO;
@@ -92,7 +106,7 @@
         self.maskView.alpha = 1;
     }
 }
-- (void)hideLeftSideMenuView:(BOOL)animation comletion:(nonnull void (^)(BOOL finish))comletion{
+- (void)hideSideMenuView:(BOOL)animation comletion:(void (^)(BOOL finish))comletion{
     [self.maskView.gestureRecognizers enumerateObjectsUsingBlock:^(__kindof UIGestureRecognizer * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([obj isKindOfClass:[UIScreenEdgePanGestureRecognizer class]]){
             obj.enabled = YES;
@@ -101,24 +115,33 @@
     }];// 关闭手势
     float width_side = [[self.sideAttr objectForKey:k_Menu_width_key]  floatValue];
 
+  
+    CGFloat translation_x = -width_side;
+    if (self.direction == SideMenuDirection_right)
+    {
+        translation_x = width_side;
+    }
+    
+    
     if (animation){
+        
         [UIView animateWithDuration:0.3 animations:^{
-            self.sideMenuView.transform = CGAffineTransformMakeTranslation(-width_side, 0);
+            self.sideMenuView.transform = CGAffineTransformMakeTranslation(translation_x, 0);
             self.maskView.alpha = 0;
 
             
         } completion:comletion];
     }
     else{
-        self.sideMenuView.transform = CGAffineTransformMakeTranslation(-width_side, 0);
+        self.sideMenuView.transform = CGAffineTransformMakeTranslation(translation_x, 0);
         self.maskView.alpha = 0;
         if(comletion){
             comletion(YES);
         }
     }
 }
--(void)removeLeftSideMenuView:(BOOL)animation{
-    [self hideLeftSideMenuView:animation comletion:^(BOOL finish) {
+-(void)removeSideMenuView:(BOOL)animation{
+    [self hideSideMenuView:animation comletion:^(BOOL finish) {
         [self.maskView removeFromSuperview];
         [self.sideMenuView removeFromSuperview];
         
@@ -126,7 +149,7 @@
 }
 
 -(void)maskViewOnTap:(UITapGestureRecognizer * )sender{
-    [self hideLeftSideMenuView:YES comletion:nil];
+    [self hideSideMenuView:YES comletion:nil];
 }
 
 -(void)onPanGesture:(UIPanGestureRecognizer *)sender{
@@ -135,34 +158,39 @@
 
     
     CGPoint translate =  [sender translationInView:sender.view];
-    if (translate.x>=0){
+    if (translate.x>=0 && self.direction == SideMenuDirection_left){
         [sender setTranslation:CGPointZero inView:sender.view];
         return;
     }
+    if (translate.x<=0 && self.direction == SideMenuDirection_right){
+        [sender setTranslation:CGPointZero inView:sender.view];
+        return;
+    }
+    
 
-    float progress = -translate.x/width_side;
+    float progress = translate.x/width_side;
     
 //    NSLog(@"translate --- %@",NSStringFromCGPoint(translate));
     self.sideMenuView.transform  = CGAffineTransformMakeTranslation(translate.x,0);
-    self.maskView.alpha = 1 - progress;
+    self.maskView.alpha = 1 - fabs(progress);
     
-    if (progress<0.5){
+    if (fabs(progress)<0.5){
         //没有滑动到需要收起的位置，回复位置
         if (state == UIGestureRecognizerStateEnded){
-            [self showLeftSideMenuView:YES];
+            [self showSideMenuView:YES];
         }
     }
     else{
         if (state == UIGestureRecognizerStateEnded){
-            [self hideLeftSideMenuView:YES comletion:nil];
+            [self hideSideMenuView:YES comletion:nil];
         }
     }
 }
 -(void)handleSwipeRecognizer:(UISwipeGestureRecognizer *)recognizer{
     CGPoint point = [recognizer locationInView:recognizer.view];
     
-    if (point.x < 20){
-        [self showLeftSideMenuView:YES];
+    if (point.x < 20 && self.direction == SideMenuDirection_left){
+        [self showSideMenuView:YES];
 
     }
 
@@ -200,6 +228,26 @@ static char maskViewKey;
     objc_setAssociatedObject(self, &maskViewKey, maskView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 
 }
+static char isshowonKey;
+-(BOOL)isShowOn{
+    NSNumber * number = objc_getAssociatedObject(self, &isshowonKey);
+    return number.boolValue;
+    
+}
+-(void)setIsShowOn:(BOOL)isShowOn{
+    objc_setAssociatedObject(self, &isshowonKey, @(isShowOn), OBJC_ASSOCIATION_RETAIN);
+}
+static char sideMenuDirectionKey;
+-(SideMenuDirection)direction{
+    return [objc_getAssociatedObject(self, &sideMenuDirectionKey) integerValue];
+}
+- (void)setDirection:(SideMenuDirection)direction{
+    objc_setAssociatedObject(self, &sideMenuDirectionKey, @(direction), OBJC_ASSOCIATION_RETAIN);
+}
+
+
+
+
 
 
 
